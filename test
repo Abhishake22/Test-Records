@@ -1,0 +1,10 @@
+
+# Count of Matches won between 2016 and 2020
+
+select winner,count(*)
+from test
+where year between 2016 and 2020
+group by winner
+order by count(*) desc
+
+
