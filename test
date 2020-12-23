@@ -16,3 +16,29 @@ group by host
 order by count(*) desc
 
 
+
+#grounds which hosted most number of matches
+
+select ground,count(*),host
+from test
+group by ground
+order by count(*) desc
+
+
+#Team who won more matches in away conditions
+
+select distinct(visitor),count(*)
+from test
+where visitor = winner
+group by visitor
+order by count(*) desc
+
+
+
+#Team who won more matches in home conditions
+
+select distinct(host),count(*)
+from test
+where host = winner
+group by host
+order by count(*) desc
