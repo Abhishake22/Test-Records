@@ -8,3 +8,11 @@ group by winner
 order by count(*) desc
 
 
+# Countries which hosted most number of matches
+
+select host,count(*)
+from test
+group by host
+order by count(*) desc
+
+
