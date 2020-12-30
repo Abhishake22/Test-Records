@@ -42,3 +42,11 @@ from test
 where host = winner
 group by host
 order by count(*) desc
+
+
+# Numbers of Bat first vs Bowlfirst
+
+select won_by,count(*) as Matches_won
+from test
+where won_by not in ('drawn')
+group by won_by
