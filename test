@@ -50,3 +50,11 @@ select won_by,count(*) as Matches_won
 from test
 where won_by not in ('drawn')
 group by won_by
+
+
+#Status of Drawn test matches over years
+
+select year,count(*) as Matches
+from test
+where won_by = 'drawn'
+group by year
