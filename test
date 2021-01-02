@@ -58,3 +58,12 @@ select year,count(*) as Matches
 from test
 where won_by = 'drawn'
 group by year
+
+
+# Matches_won by teams
+
+select winner,count(*) as Matches_won
+from test
+where Winner not in ('drawn')
+group by winner
+order by Matches_won desc
