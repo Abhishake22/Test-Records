@@ -67,3 +67,12 @@ from test
 where Winner not in ('drawn')
 group by winner
 order by Matches_won desc
+
+
+
+# Matches_Resulted in Draw over years
+
+select year,count(*) as Matches
+from test
+where won_by = 'drawn'
+group by year
