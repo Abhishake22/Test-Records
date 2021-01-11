@@ -76,3 +76,12 @@ select year,count(*) as Matches
 from test
 where won_by = 'drawn'
 group by year
+
+
+#Find the number of test matches ended as Inns victory
+
+select year,Won_by,count(*) as Matches
+from test
+where Won_by = 'innings victory'
+group by year
+
