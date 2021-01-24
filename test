@@ -85,3 +85,27 @@ from test
 where Won_by = 'innings victory'
 group by year
 
+
+
+#Finding team who has won most number of test matches ended in 5 days
+
+select Winner,count(*) as Number_of_Matches
+from test
+where days= 5 and not winner = 'drawn'
+group by winner order by Number_of_matches desc
+
+
+#Finding team who has won most number of test matches ended in 4days
+
+select Winner,count(*) as Number_of_Matches
+from test
+where days= 4 and not winner = 'drawn'
+group by winner order by Number_of_matches desc
+
+#Finding team who has won most number of test matches ended in 3days
+
+select Winner,count(*) as Number_of_Matches
+from test
+where days= 3
+group by winner order by Number_of_matches desc
+
