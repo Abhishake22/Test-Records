@@ -109,3 +109,12 @@ from test
 where days= 3
 group by winner order by Number_of_matches desc
 
+
+
+# Performance of last 10 years
+
+select result,count(*)
+from tests
+where year(date) between 2010 and 2020
+group by result
+
